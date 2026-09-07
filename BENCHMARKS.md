@@ -14,6 +14,28 @@
 
 - Golden preprocessing: 25 / 25 passed
 - PII masking recall: 60 / 60 = 100%
+##Lab 2 
+
+| Component / Finding | bert-base-multilingual-cased | CAMeL-Lab/bert-base-arabic-camelbert-mix |
+|---|---:|---:|
+| Embeddings | 92,208,384 | 23,436,288 |
+| Attention | 28,366,848 | 28,366,848 |
+| FFN | 56,669,184 | 56,669,184 |
+| Norms | 18,432 | 18,432 |
+| Pooler | 590,592 | 590,592 |
+| Other | 0 | 0 |
+| **Total parameters** | **177,853,440** | **109,081,344** |
+
+| Behaviour | Result |
+|---|---|
+| Numerical equivalence | True |
+| Lower-triangular causal attention | True |
+| Model family | Decoder-style causal attention |
+| Adjacency-looking head | Detected |
+| `[SEP]` sink behaviour | Detected |
+| `[PAD]` leakage without mask | True |
+| `[PAD]` leakage with correct mask | False |
+| No `[PAD]` attention leakage after masking | True |
 
 ## Lab 3 — Models
 | Model | Metric | Validation | Frozen test | Train time |
