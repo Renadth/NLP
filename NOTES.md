@@ -26,7 +26,7 @@ For each one record: example, why it matters, and clean/preserve/task-dependent.
 - Class: Duplicated words
 - Example: FB-000015
 - Why it matters: adds noise
-- Decision: Remove duplicate
+- Decision: keep because it may be intentional 
 ### Defect 6
 - Class: Emoji
 - Example: FB-000066
