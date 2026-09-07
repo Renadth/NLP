@@ -6,7 +6,7 @@ import unicodedata
 PREPROC_VERSION = "1.2.0"
 
 _TATWEEL = "\u0640"
-_HTML_TAG_RE = re.compile(r'<[^>]+>')
+_HTML_TAG_RE = re.compile(r'<(?!/?(?:PHONE|NATIONAL_ID)>)[^>]+>')
 _REPEAT_RE = re.compile(r'(.)\1{2,}')
 _WHITESPACE_RE = re.compile(r'\s+')
 
