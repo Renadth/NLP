@@ -3,15 +3,17 @@
 > Fill these tables from **your own runs**. Do not copy course reference numbers.
 
 ## Lab 1 — Tokenizer audit
-| Tokenizer | AR fertility | EN fertility | AR p95 len | EN p95 len | AR UNK rate |
-|---|---:|---:|---:|---:|---:|
-| mBERT | | | | | |
-| XLM-R | | | | | |
-| CAMeLBERT | | | | | |
-| DistilBERT | | | | | |
+## Tokenizer Audit Results
 
-- Golden preprocessing: ___ / 25 passed
-- PII masking recall: ___ / 60 = ___%
+| Tokenizer  | AR fertility | EN fertility | AR p95 len | EN p95 len |
+|------------|-------------|-------------|-----------|-----------|
+| mBERT      | 2.153       | 1.510       | 25.0      | 23.0      |
+| XLM-R      | 1.672       | 1.434       | 19.0      | 21.0      |
+| CAMeLBERT  | 1.405       | 2.705       | 18.0      | 36.0      |
+| DistilBERT | 4.527       | 1.298       | 45.0      | 19.0      |
+
+- Golden preprocessing: 25 / 25 passed
+- PII masking recall: 60 / 60 = 100%
 
 ## Lab 3 — Models
 | Model | Metric | Validation | Frozen test | Train time |
