@@ -14,7 +14,8 @@
 
 - Golden preprocessing: 25 / 25 passed
 - PII masking recall: 60 / 60 = 100%
-##Lab 2 
+
+## Lab 2 
 
 | Component / Finding | bert-base-multilingual-cased | CAMeL-Lab/bert-base-arabic-camelbert-mix |
 |---|---:|---:|
