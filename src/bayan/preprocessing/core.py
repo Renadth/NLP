@@ -7,7 +7,7 @@ PREPROC_VERSION = "1.2.0"
 
 _TATWEEL = "\u0640"
 _HTML_TAG_RE = re.compile(r'<(?!/?(?:PHONE|NATIONAL_ID)>)[^>]+>')
-_REPEAT_RE = re.compile(r'(.)\1{2,}')
+_REPEAT_RE = re.compile(r'([^\d\s])\1{2,}')
 _WHITESPACE_RE = re.compile(r'\s+')
 
 _PHONE_RE = re.compile(r'(?:\+?966|0)5\d{8}\b')
