@@ -84,3 +84,14 @@
 - HTTP p99, 16 concurrent:
 - classifier quantisation decision:
 - NER quantisation decision:
+
+## TF-IDF + LinearSVC baseline
+- Macro-F1 (frozen test split): 1.0000
+
+## TF-IDF + LinearSVC baseline
+- Macro-F1 (frozen test split): 1.0000
+
+## TF-IDF + LinearSVC baseline
+- Macro-F1 (4 topics present in frozen test split): 1.0000
+- Macro-F1 (forced across all 8 topics): 0.5000
+- Note: test split contains only 4/8 topics (lighting, water, digital_services, parks) due to citizen-level grouping; roads/waste/billing/licensing citizens all landed in train.
