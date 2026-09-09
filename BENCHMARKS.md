@@ -68,6 +68,14 @@
 - Artefact: `artifacts/ner`
 - Note: Results are on the supplied synthetic dataset and should not be interpreted as real-world NER performance.
 
+### Lab 3B — Extractive QA
+- Checkpoint: `distilbert-base-uncased-distilled-squad`
+- Smoke set: 12 supplied questions
+- Answerable: **12/12**
+- Unanswerable: **0/0** (the supplied smoke set contains no unanswerable questions)
+- Target in README: 9/9 answerable and 3/3 unanswerable
+- Note: The supplied `qa_smoke_set.json` is inconsistent with the README target; all 12 questions are marked answerable.
+
 
 ## Lab 4 — Arabic model bake-off
 | Checkpoint | macro-F1 all | Gulf | MSA | AR fertility |
