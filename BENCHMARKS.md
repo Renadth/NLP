@@ -41,10 +41,21 @@
 ## Lab 3 — Models
 | Model | Metric | Validation | Frozen test | Train time |
 |---|---|---:|---:|---:|
-| TF-IDF + LinearSVC | macro-F1 | | | |
-| Topic classifier | macro-F1 | | | |
+| TF-IDF + LinearSVC | macro-F1 | 1.0000 | 1.0000 | N/A |
+| Topic classifier (CAMeLBERT) | macro-F1 | 1.0000 | 1.0000 | 237.8243 s |
 | NER | entity-F1 | | | |
 | QA | span/null smoke | | | |
+
+### Lab 3A — Topic classifier
+- Checkpoint: `CAMeL-Lab/bert-base-arabic-camelbert-mix`
+- Train split: 9,592
+- Validation split: 1,191
+- Frozen test split: 1,217
+- Frozen-test Macro-F1 improvement over TF-IDF baseline: **+0.0000**
+- Target: baseline + 0.08
+- Target status: **Not achievable on this dataset because the baseline Macro-F1 is already 1.0000**
+- Dataset limitation: exact duplicate texts remain across the grouped train/validation data, contributing to the perfect baseline and Transformer scores.
+- Classifier artefact: `/content/drive/MyDrive/SDA-AIE-211/artifacts/topic_classifier`
 
 ## Lab 4 — Arabic model bake-off
 | Checkpoint | macro-F1 all | Gulf | MSA | AR fertility |
@@ -88,10 +99,6 @@
 ## TF-IDF + LinearSVC baseline
 - Macro-F1 (frozen test split): 1.0000
 
-## TF-IDF + LinearSVC baseline
-- Macro-F1 (frozen test split): 1.0000
-
-## TF-IDF + LinearSVC baseline
 - Macro-F1 (4 topics present in frozen test split): 1.0000
 - Macro-F1 (forced across all 8 topics): 0.5000
 - Note: test split contains only 4/8 topics (lighting, water, digital_services, parks) due to citizen-level grouping; roads/waste/billing/licensing citizens all landed in train.
