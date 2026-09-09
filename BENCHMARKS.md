@@ -47,6 +47,8 @@
 | QA | span/null smoke | | | |
 
 ### Lab 3A — Topic classifier
+| NER | entity-F1 | 1.0000 | 1.0000 | 40.66 s |
+
 - Checkpoint: `CAMeL-Lab/bert-base-arabic-camelbert-mix`
 - Train split: 9,592
 - Validation split: 1,191
@@ -56,6 +58,16 @@
 - Target status: **Not achievable on this dataset because the baseline Macro-F1 is already 1.0000**
 - Dataset limitation: exact duplicate texts remain across the grouped train/validation data, contributing to the perfect baseline and Transformer scores.
 - Classifier artefact: `/content/drive/MyDrive/SDA-AIE-211/artifacts/topic_classifier`
+
+### Lab 3B — NER
+- Checkpoint: `CAMeL-Lab/bert-base-arabic-camelbert-mix`
+- Data: `data/models/bayan_ner.conll`
+- Split: 3,200 train / 400 validation / 400 test
+- Entity-level F1: **1.0000** on validation and test
+- Target: ≥ 0.80 — **met**
+- Artefact: `artifacts/ner`
+- Note: Results are on the supplied synthetic dataset and should not be interpreted as real-world NER performance.
+
 
 ## Lab 4 — Arabic model bake-off
 | Checkpoint | macro-F1 all | Gulf | MSA | AR fertility |
