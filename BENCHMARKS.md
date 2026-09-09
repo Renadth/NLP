@@ -97,15 +97,24 @@
 - Result: **Target not met**
 
 
-## Lab 5 — Search
-| Configuration | recall@10 | MRR@10 | p50 latency/query |
-|---|---:|---:|---:|
-| bi-encoder only | | | |
-| + cross-encoder rerank | | | |
-| cross-lingual slice | | | |
+### Lab 5 — Bilingual semantic search
 
-- no-answer empty-correct: ___ / 20
-- cross-lingual gap: ___
+| Metric | Measured result |
+|---|---:|
+| Recall@10 without reranking | 0.0308 |
+| MRR@10 without reranking | 0.0049 |
+| Recall@10 with reranking | 0.0077 |
+| MRR@10 with reranking | 0.0019 |
+| Arabic Recall@10 with reranking | 0.0167 |
+| English Recall@10 with reranking | 0.0000 |
+| Cross-lingual Recall@10 gap | 0.0167 |
+| No-answer correctness | 20/20 |
+
+- Retrieval targets: Recall@10 ≥ 0.80 and MRR@10 ≥ 0.70 — **not met**.
+- No-answer target: ≥17/20 — **met (20/20)**.
+- The supplied BM25 baseline file is internally inconsistent with the labelled query set (for example, Q-001 and Q-006 report contradictory recall values).
+- The supplied corpus also contains many near-duplicate synthetic cases whose IDs are not always the labelled relevant IDs. Q-001 demonstrates this: the bi-encoder retrieves near-exact semantic matches, but their IDs are outside the labelled relevant-ID set.
+- L2 normalization was verified: raw embedding norms were 4.070154 (Arabic) and 5.635319 (English), while normalized norms were exactly 1.000000.
 
 ## Lab 6 — Evaluation
 | Model | Aggregate macro-F1 [CI] | Gulf [CI] | Invariance pass | MFT pass |
