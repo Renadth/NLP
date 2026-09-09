@@ -151,7 +151,7 @@ test_metrics = trainer.evaluate(test_dataset)
 print(test_metrics)
 
 print("\nSaving model and tokenizer...")
-trainer.save_model(output_dir)
+model.save_pretrained(output_dir, safe_serialization=False)
 tokenizer.save_pretrained(output_dir)
 
 print("\nSaved artefact:")
