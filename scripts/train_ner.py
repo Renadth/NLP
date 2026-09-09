@@ -147,8 +147,7 @@ def main():
     output_dir = Path(args.output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
 
-    data_path = Path("data/models/bayan_ner.conll")
-
+    data_path = Path("data/models/bayan_ner_segmented.conll")
     if not data_path.exists():
         raise FileNotFoundError(
             f"NER data not found: {data_path}"

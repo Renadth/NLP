@@ -77,12 +77,25 @@
 - Note: The supplied `qa_smoke_set.json` is inconsistent with the README target; all 12 questions are marked answerable.
 
 
-## Lab 4 — Arabic model bake-off
-| Checkpoint | macro-F1 all | Gulf | MSA | AR fertility |
-|---|---:|---:|---:|---:|
-| multilingual incumbent | | | | |
-| Arabic dialect-aware | | | | |
-| optional third model | | | | |
+### Lab 4 — NER segmentation impact
+
+- Baseline (Day 2) LOCATION recall: 1.00
+- Segmented LOCATION recall: 1.00
+- LOCATION recall delta: **0.00 percentage points**
+- Target: approximately +4 points
+- Result: **Target not met on the supplied dataset**
+
+### Lab 4 — Arabic model bake-off
+
+| Model | All macro-F1 | Gulf macro-F1 | MSA macro-F1 |
+|---|---:|---:|---:|
+| CAMeLBERT-mix | 1.0000 | 1.0000 | 1.0000 |
+| CAMeLBERT-DA | 1.0000 | 1.0000 | 1.0000 |
+
+- Gulf macro-F1 delta (DA − mix): **+0.0000**
+- Target: +0.04
+- Result: **Target not met**
+
 
 ## Lab 5 — Search
 | Configuration | recall@10 | MRR@10 | p50 latency/query |
